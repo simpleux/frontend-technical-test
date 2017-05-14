@@ -1,11 +1,12 @@
-const gulp = require('gulp');
-const browserify = require('browserify');
-const babelify = require('babelify');
-const babel = require('babel-register');
-const source = require('vinyl-source-stream');
-const sass = require('gulp-sass');
-const mocha = require('gulp-mocha');
-const server = require('gulp-develop-server');
+const gulp         = require('gulp');
+const browserify   = require('browserify');
+const babelify     = require('babelify');
+const babel        = require('babel-register');
+const source       = require('vinyl-source-stream');
+const sass         = require('gulp-sass');
+const mocha        = require('gulp-mocha');
+const server       = require('gulp-develop-server');
+const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('js', function () {
    return browserify({entries: './src/app.js', extensions: ['.js'], debug: true})
@@ -22,6 +23,9 @@ gulp.task('js:watch', function () {
 gulp.task('sass', function () {
     return gulp.src('./src/style.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions', '> 5%']
+        }))
         .pipe(gulp.dest('./dist'));
 });
 
