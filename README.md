@@ -33,3 +33,15 @@ You have the following test libraries available through ```` gulp test ````
 * Chai [https://github.com/chaijs/chai](https://github.com/chaijs/chai)
 * Sinon [https://github.com/sinonjs/sinon](https://github.com/sinonjs/sinon)
 * Enzyme [https://github.com/airbnb/enzyme](https://github.com/airbnb/enzyme)
+
+
+## Planning & Time Allocation
+-- Restrict yourself to maximum of 2 hours.
+-- API Design with effective error handling 
+-- Re-structure React so it can be easily expand and reflect the harmony with Server Side API. 
+-- Introduce containers to interact with API and State Less Components for easy testing. 
+-- Test
+
+## General Restriction
+- Restrict yourself to existing API structure and Stay in `front-end` realm.
+- Result should be tested with latest 2 versions of Browser.
