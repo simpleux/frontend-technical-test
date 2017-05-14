@@ -1,5 +1,5 @@
 const expect  = require('chai').expect;
-const getData = require('../src/api').getData;
+const getData = require('~/api').getData;
 
 describe("getData example test", function () {
 
