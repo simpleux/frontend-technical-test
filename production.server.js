@@ -1,8 +1,14 @@
-const Express = require('express');
-const path = require('path');
-const hbs = require('hbs');
+const Express     = require('express');
+const path        = require('path');
+const hbs         = require('hbs');
+const http        = require('http');
+const compression = require('compression');
+const PORT        = 9988;
 
 const app = new Express();
+
+app.disable('x-powered-by');
+app.use(compression());
 
 app.set('view engine', 'html');
 app.engine('html', hbs.__express); // eslint-disable-line
@@ -23,7 +29,7 @@ app.get('/api/vehicle', (req, res) => {
 });
 
 app.get('/api/vehicle/:id', (req, res) => {
-    const vehicle = require('./server_api/vehicle_'+ req.params.id +'.js');
+    const vehicle = require('./server_api/vehicle_' + req.params.id + '.js');
     res.json(vehicle);
 });
 
@@ -31,4 +37,13 @@ app.get('*', (req, res) => {
     res.render('index');
 });
 
-module.exports = app;
+try {
+    const server = http.createServer(app);
+
+    server.listen(PORT, () => {
+        console.log(`Here you go, Open localhost:${PORT} and see your app running`);
+    });
+
+} catch (err) {
+    throw new Error(err);
+}

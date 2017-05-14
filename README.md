@@ -1,7 +1,7 @@
 Frontend Technical Test for Connect Group [www.connect-group.com](http://www.connect-group.com/)
 
 #### Requirements
-* [Node.js](https://nodejs.org/en/)(6.x.x)
+* [Node.js](https://nodejs.org/en/)(7.x.x)
 * Gulp
 
 ### Setup Instructions
@@ -33,3 +33,16 @@ You have the following test libraries available through ```` gulp test ````
 * Chai [https://github.com/chaijs/chai](https://github.com/chaijs/chai)
 * Sinon [https://github.com/sinonjs/sinon](https://github.com/sinonjs/sinon)
 * Enzyme [https://github.com/airbnb/enzyme](https://github.com/airbnb/enzyme)
+
+
+## Planning & Time Allocation
+-- Restrict yourself to maximum of 2 hours.
+-- API Design with effective error handling 
+-- Re-structure React so it can be easily expand and reflect the harmony with Server Side API. 
+-- Introduce containers to interact with API and State Less Components for easy testing. 
+-- Test
+
+## General Restriction
+- Restrict yourself to existing API structure and Stay in `front-end` realm.
+-- Added images route in server.js, so we can render images. Need to communicate with backend.
+- Result should be tested with latest 2 versions of Modern Browsers.

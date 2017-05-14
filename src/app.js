@@ -1,5 +1,5 @@
-import React from 'react';
-import { render } from 'react-dom';
-import VehicleList from './components/VehicleList';
+import React            from 'react';
+import ReactDOM         from 'react-dom';
+import Vehicles         from '~/components/vehicles';
 
-render(<VehicleList />, document.getElementById('app'));
+ReactDOM.render(<Vehicles />, document.getElementById('app'));
