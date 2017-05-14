@@ -1,0 +1,83 @@
+.component-vehicle {
+
+
+  @media screen and (min-width: $screen-tablet) {
+    display: flex;
+    min-width: 50%;
+    max-width: 50%;
+    flex: 1 0 auto;
+
+    text-align: center;
+  }
+
+  @media screen and (min-width: $screen-desktop) {
+    display: flex;
+    width: calc(100%/4);
+    min-width: calc(100%/4);
+    max-width: calc(100%/4);
+    flex: 1 0 auto;
+  }
+}
+
+
+//Border Support
+.component-vehicle-inner {
+  box-sizing: border-box;
+  padding:20px;
+  background: $bg-colour;
+
+  @media screen and (min-width: $screen-tablet) {
+    border-right:1px solid #ccc;
+  }
+}
+
+.component-vehicle-item {
+  width:100%;
+
+  @media screen and (max-width: $screen-mobile){
+    display: flex;
+
+    .component-vehicle-image {
+      display: flex;
+      width:180px;
+      min-width:180px;
+    }
+
+    .component-vehicle-inner {
+      display: flex;
+      flex: 1 0 auto;
+      max-width: calc(100% - 180px);
+      flex-direction: column;
+      border-bottom:1px solid #ccc;
+    }
+  }
+}
+
+.component-vehicle-item-name-inner {
+
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $screen-tablet){
+    text-align: center;
+    display: inline-block;
+    margin:0 auto;
+
+    border-top:1px solid #000;
+    border-bottom: 1px solid #000;
+    padding:12px 0;
+    margin-bottom: 30px;
+  }
+}
+
+.component-vehicle-item-price {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.component-vehicle-item-description {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  white-space: pre-wrap;
+}
