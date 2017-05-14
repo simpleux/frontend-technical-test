@@ -44,4 +44,5 @@ You have the following test libraries available through ```` gulp test ````
 
 ## General Restriction
 - Restrict yourself to existing API structure and Stay in `front-end` realm.
+-- Added images route in server.js, so we can render images. Need to communicate with backend.
 - Result should be tested with latest 2 versions of Modern Browsers.
