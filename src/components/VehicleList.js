@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { getData } from '../api';
+import api 					from '~/api';
+import Loading 				from '~/components/loading';
 
-export default
-class VehicleList extends Component {
+export default class VehicleList extends Component {
 
 	constructor(props) {
 		super(props);
@@ -13,11 +13,11 @@ class VehicleList extends Component {
 	}
 
 	componentDidMount() {
-		getData((data) => {
-			this.setState({
-				data
-			})
+
+		api.vehicles().then(data => {
+			this.setState({data});
 		});
+
 	}
 
 	render() {
@@ -28,6 +28,6 @@ class VehicleList extends Component {
 		    )
 	    }
 
-		return (<h1>Loading...</h1>);
+		return <Loading />;
 	}
 }
