@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "start": "node production.server.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,8 @@
     "enzyme": "^2.4.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^6.1.2",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^2.1.2",
     "jsdom": "^10.1.0",
     "sinon": "^1.17.6",
     "xmlhttprequest": "^1.8.0"
@@ -25,6 +28,7 @@
     "babel-preset-react": "^6.11.1",
     "babelify": "^7.3.0",
     "browserify": "^13.1.0",
+    "compression": "^1.6.2",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",

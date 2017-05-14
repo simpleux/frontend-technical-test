@@ -7,12 +7,23 @@ const sass         = require('gulp-sass');
 const mocha        = require('gulp-mocha');
 const server       = require('gulp-develop-server');
 const autoprefixer = require('gulp-autoprefixer');
+const streamify    = require('gulp-streamify');
+const uglify       = require('gulp-uglify');
 
 gulp.task('js', function () {
    return browserify({entries: './src/app.js', extensions: ['.js'], debug: true})
         .transform('babelify', {presets: ['es2015', 'react']})
         .bundle()
         .pipe(source('app.js'))
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('js:production', function () {
+    return browserify({entries: './src/app.js', extensions: ['.js'], debug: false})
+        .transform('babelify', {presets: ['es2015', 'react']})
+        .bundle()
+        .pipe(source('app.js'))
+        .pipe(streamify(uglify()))
         .pipe(gulp.dest('dist'));
 });
 
