@@ -33,6 +33,10 @@
     "jsdom": "^10.1.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
+    "superagent": "^3.5.2",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=7.8.0"
   }
 }
